@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>奈良高専祭2018</title>
+
+    <!-- Vue.js -->
+    <script src="js/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+    <div id="page" class="container">
+        <!-- top -->
+        <div id="top" class="contents">
+            <div class="title">
+                <h2>第52回奈良高専高専祭</h2>
+                <h1 class="thema">熱狂！ウルトラ高専祭！</h1>
+            </div>
+        </div>
+
+        <!-- about -->
+        <div id="about" class="contents">
+            <h3 class="titlle"><img src="images/icon/code.svg" alt="icon"> 高専祭について</h3>
+            <p class="speech">&emsp;今年度の高専祭実行委員長の中満悠人です。 このたびは奈良高専祭公式サイトをご覧いただき、ありがとうございます。
+                高専祭では学生主体で行われる様々な企画を用意しています。<br>
+                体育館内ステージでは軽音楽部や吹奏楽部による演奏や高専祭実行委員会によるステージ企画を行います。屋内の教室では各学科、クラブ団体の様々な特徴のある展示物や実験体験コーナーなどがある学科展が開催されます。屋外には各クラブ、同好会、各クラスなどの団体が出店している模擬店が並びます。学生だけでなく近隣にお住まいの方々、
+                子どもからお年寄りまで楽しめるお祭りになっております。
+                <br>&emsp;今年の高専祭のテーマは「<span class="thema" style="font-size: 1.4em;">熱狂！ウルトラ高専祭！</span>」に決まりました。皆さんに熱狂して楽しんでいただけるよう、
+                私たちも努力を惜しまず準備を進めてまいります。みなさまのご来場を心よりお待ちしております！
+            </p>
+            <div class="container" style="width: 100%; height: 100%;">
+                <p style="font-size: 1.344em;">ポスター</p>
+                今年度の高専祭ポスターです！<br>
+                <div style="color: var(--cream); font-size: 1.1em">
+                    <a href="images/poster/poster.png">PNG</a><br>
+                    <a href="images/poster/poster.pdf">PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 学科展示 -->
+        <div id="depart_exhibition" class="contents">
+            <h3 class="titlle"><img src="images/icon/desktop.svg" alt="icon"> 学科展</h3>
+            <div v-for="(value) in depart">
+                <div class="card cream" v-bind:style="{ border: 'solid 6px var(' + value.color + ')'}" style="opacity: 0.9;">
+                    <div class="card-body">
+                        <h4 class="card-title" v-bind:style="{ color: 'var(' + value.color + ')'}">{{
+                            value.name }}</h4>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted t-grai">場所：{{ value.place }}</h6> -->
+                        <p class="card-text t-grai" v-for="(value) in value.contents">{{ value }}</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <!-- 一般展示 -->
+        <div id="exhibition" class="contents">
+            <h3 class="titlle"><img src="images/icon/puzzle-piece.svg" alt="icon"> その他展示</h3>
+            <div v-for="(value) in exhibition">
+                <div class="card cream" style="opacity: 0.9; border: solid 6px var(--yellowgreen);">
+                    <div class="card-body">
+                        <h4 class="card-title t-orange">
+                            {{ value.name }}
+                        </h4>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted t-grai">場所：{{ value.place }}</h6> -->
+                        <p class="card-text t-grai" v-for="(value) in value.contents" style="display: inline;">
+                            <span v-if="value.type == '##'" class="t-grai" style="font-weight: bold; color: var(--pink)">
+                                {{ value.contents }}<br>
+                            </span>
+                            <span v-else="value.type == ''" class="t-grai" style="display: inline;">
+                                {{ value }}<br>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <!-- 模擬店 -->
+        <div id="food" class="contents">
+            <h3 class="titlle"><img src="images/icon/coffee.svg" alt="icon"> 模擬店</h3>
+            <div v-for="(value) in food">
+                <div class="card cream" style="opacity: 0.9; border: solid 6px var(--pink);">
+                    <div class="card-body">
+                        <h4 class="card-title t-orange">
+                            {{ value.name }}
+                        </h4>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted t-grai">場所：{{ value.place }}</h6> -->
+                        <p class="card-text t-grai" v-for="(value) in value.contents" style="display: inline;">
+                            <span v-if="value.type == '##'" class="t-grai" style="font-weight: bold; color: var(--red)">
+                                {{ value.contents }}<br>
+                            </span>
+                            <span v-else="value.type == ''" class="t-grai" style="display: inline;">
+                                {{ value }}<br>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <!-- 企画 -->
+        <div id="plan" class="contents">
+            <h3 class="titlle"><img src="images/icon/dice.svg" alt="icon"> 企画@第１体育館</h3>
+            <div class="card cream t-grai container" style="opacity: 0.9; border: solid 6px var(--orange);">
+                <h4 class="table-title card-title">１日目（土曜日）</h4>
+                <table class="table container">
+                    <thead class="t-body">
+                        <tr>
+                            <th>時間</th>
+                            <th>企画</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(value) in plan.first">
+                            <td> {{ value.time }}~ </td>
+                            <td> {{ value.name }} </td>
+                        </tr>
+                    </tbody>
+                </table><br>
+                <h4 class="table-title card-title">２日目（日曜日）</h4>
+                <table class="table container">
+                    <thead class="t-body">
+                        <tr>
+                            <th>時間</th>
+                            <th>企画</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(value) in plan.second">
+                            <td> {{ value.time }}~ </td>
+                            <td> {{ value.name }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- アクセス -->
+        <div id="access">
+            <h3 class="titlle"><img src="images/icon/subway.svg" alt="icon"> アクセス</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bs-component">
+                        <div class="alert alert-dismissible alert-warning">
+                            <h4 class="alert-heading">ご注意!</h4>
+                            <p class="mb-0">※校内に駐車場は設置しておりません。ご来場の際には公共交通機関等をご利用ください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13129.054600126616!2d135.757263!3d34.648044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd4d6a42a78fc15f0!2z5Zu956uLIOWliOiJr-W3pealremrmOetieWwgumWgOWtpuagoQ!5e0!3m2!1sja!2sjp!4v1539353287835"
+                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="card-header">公共交通</div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: var(--red);">近鉄郡山駅よりお越しの場合</h4>
+                            <p class="card-text" style="color: var(--grai);">
+                                「近鉄郡山駅」バス停より、奈良交通「大和小泉駅東口」または「矢田寺」行きバスにご乗車いただき「奈良高専」にて下車してください。
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: var(--red);">JR大和小泉駅よりお越しの場合</h4>
+                            <p class="card-text" style="color: var(--grai);">
+                                「大和小泉駅東口」バス停より、奈良交通「近鉄郡山駅」行きバスにご乗車いただき「奈良高専」にて下車してください。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">&copy;高専祭実行委員会2018<br>Created by <a href="http://joken.nara-k.ac.jp">情報処理研究会</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- MenuBar -->
+    <div class="menu row">
+        <div>
+            <a id="menu-bar-o" data-toggle="collapse" href="#menu-bar" role="button" aria-expanded="true" aria-controls="menu-bar">
+                <img src="images/icon/bars.svg" alt="icon" class="collapse show">
+                <p class="icon-label">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+            </a>
+            <div data-toggle="menu-bar" id="menu-bar" class="collapse">
+                <a href="#about"><img src="images/icon/code.svg" alt="icon">
+                    <p class="icon-label">About</p>
+                </a>
+                <a href="#depart_exhibition"><img src="images/icon/desktop.svg" alt="icon">
+                    <p class="icon-label">学科展</p>
+                </a>
+                <a href="#exhibition"><img src="images/icon/puzzle-piece.svg" alt="icon">
+                    <p class="icon-label">その他展示</p>
+                </a>
+                <a href="#food"><img src="images/icon/coffee.svg" alt="icon">
+                    <p class="icon-label">模擬店</p>
+                </a>
+                <a href="#plan"><img src="images/icon/dice.svg" alt="icon">
+                    <p class="icon-label">企画</p>
+                </a>
+                <a href="#access"><img src="images/icon/subway.svg" alt="icon">
+                    <p class="icon-label">アクセス</p>
+                </a>
+            </div>
+        </div><br>
+    </div>
+
+    </div>
+
+    <!-- JS Load -->
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.min.js"> </script> <!-- popper.js -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

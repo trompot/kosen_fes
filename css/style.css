@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+/* Font読み込み */
+@font-face {
+  font-family: "MyFont";
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  src: url(../font/GoogleFonts/MPLUSRounded1c-Regular.ttf);
+  /* src: url(../font/GoogleFonts/MPLUSRounded1c-Bold.ttf); */
+}
+@font-face {
+  font-family: "thema";
+  src: url(../font/font!!!/HGSSoeiKakupoptai-03.ttf);
+}
+
+/* 定義 */
+:root {
+  --red: #c0392b;
+  --pink: #ee5a24;
+  --orange: #f79f1f;
+  --yellow: #f1c40f;
+  --blue: #1289a7;
+  --purple: #8e44ad;
+  --yellowgreen: #a3cb38;
+  --green: #009432;
+  --grai: #2f3640;
+  --cream: #e6fafc;
+}
+
+/* スタイル */
+html,
+body {
+  font-family: "MyFont";
+  height: 100%;
+  width: 100%;
+  /* font-size: 25px; */
+  line-height: 1.5em;
+  color: #e6fafc;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.body {
+  background-color: var(--grai);
+}
+
+#page {
+  height: 100%;
+}
+
+.title {
+  /* font-size: 50px; */
+  display: inline;
+  /* font-size: 10em; */
+}
+
+title,
+img {
+  /* font-size: 50px; */
+  height: 25px;
+  display: inline;
+}
+
+.thema {
+  font-family: "thema";
+  color: var(--orange);
+  /* display: inline; */
+  /* font-size: 1.1em; */
+}
+
+.card-title {
+  text-shadow: 0.5px 0.5px 0.5px #2f3640;
+  /* text-shadow: 1px 1px 0 var(--cream); */
+}
+
+.card-header {
+  color: var(--grai);
+}
+
+.map {
+  margin-bottom: 5px;
+}
+
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  text-align: center;
+}
+.menu img {
+  width: 40px;
+  height: 40px;
+  margin-top: 7px;
+}
+.menu-bar {
+  position: fixed;
+  margin-top: -500em;
+  margin-left: -500em;
+  width: 1000em;
+  height: 10000em;
+  background-color: var(--grai);
+  z-index: -1;
+}
+
+.icon-label {
+  padding-top: -px;
+  color: var(--cream);
+}
+
+.table-title {
+  margin-top: 15px;
+  color: var(--grai);
+}
+
+.t-body {
+  background-color: var(--orange);
+}
+/* footer */
+.footer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* MenuBar */
+.menuBarNo {
+  display: none;
+}
+
+/* 各ページ */
+.contents {
+  margin-bottom: 10em;
+}
+
+/* top page */
+#top,
+.title {
+  text-align: center;
+  margin-top: 30%;
+}
+
+#top {
+  height: 100%;
+}
+
+/* 色設定 */
+.red {
+  background-color: #c0392b;
+}
+.pink {
+  background-color: #ee5a24;
+}
+.orange {
+  background-color: #f79f1f;
+}
+.yellow {
+  background-color: #f1c40f;
+}
+.blue {
+  background-color: #1289a7;
+}
+.purple {
+  background-color: #8e44ad;
+}
+.yellowgreen {
+  background-color: #a3cb38;
+}
+.green {
+  background-color: #009432;
+}
+.grai {
+  background-color: #2f3640;
+}
+.cream {
+  background-color: #e6fafc;
+}
+.b-red {
+  border: solid 5px #c0392b;
+}
+.t-red {
+  color: #c0392b;
+}
+.t-pink {
+  color: #ee5a24;
+}
+.t-orange {
+  color: #f79f1f;
+}
+.t-yellow {
+  color: #f1c40f;
+}
+.t-blue {
+  color: #1289a7;
+}
+.t-purple {
+  color: #8e44ad;
+}
+.t-yellowgreen {
+  color: #a3cb38;
+}
+.t-green {
+  color: #009432;
+}
+.t-grai {
+  color: #2f3640;
+}
+.t-grai-w {
+  color: #7f8c8d;
+}
+.t-cream {
+  color: #e6fafc;
+}
