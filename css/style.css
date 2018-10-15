@@ -71,6 +71,10 @@ img {
   /* font-size: 1.1em; */
 }
 
+.card {
+  margin-bottom: 10px;
+}
+
 .card-title {
   text-shadow: 0.5px 0.5px 0.5px #2f3640;
   /* text-shadow: 1px 1px 0 var(--cream); */
@@ -132,7 +136,7 @@ img {
 
 /* 各ページ */
 .contents {
-  margin-bottom: 10em;
+  margin-bottom: 15em;
 }
 
 /* top page */
