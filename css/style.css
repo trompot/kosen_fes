@@ -23,7 +23,7 @@
   --yellowgreen: #a3cb38;
   --green: #009432;
   --grai: #2f3640;
-  --cream: #e6fafc;
+  --cream: #f2f5f7;
 }
 
 /* スタイル */
@@ -57,11 +57,20 @@ a:hover {
   /* font-size: 10em; */
 }
 
-title,
-img {
+.title-icon {
   /* font-size: 50px; */
-  height: 25px;
+  height: 30px;
   display: inline;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 15px;
+  left: 0%;
+  width: 100%;
+}
+.arrow-down img {
+  width: 20px;
 }
 
 .thema {
@@ -71,12 +80,20 @@ img {
   /* font-size: 1.1em; */
 }
 
+.poster {
+  width: 70%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
 .card {
   margin-bottom: 10px;
+  width: 100%;
+  color: var(--grai);
 }
 
 .card-title {
-  text-shadow: 0.5px 0.5px 0.5px #2f3640;
+  text-shadow: 0.5px 0.5px 0.5px var(--grai);
   /* text-shadow: 1px 1px 0 var(--cream); */
 }
 
@@ -91,27 +108,42 @@ img {
 .menu {
   position: fixed;
   top: 20px;
-  right: 50px;
-  text-align: center;
+  text-align: right;
+  /* width: 100%;
+  height: 100%; */
 }
 .menu img {
   width: 40px;
   height: 40px;
   margin-top: 7px;
 }
-.menu-bar {
+
+.menu-bar-list {
   position: fixed;
-  margin-top: -500em;
-  margin-left: -500em;
-  width: 1000em;
-  height: 10000em;
-  background-color: var(--grai);
-  z-index: -1;
+  /* text-align: right; */
+  right: 15px;
+  top: 15px;
+  width: 100%;
+}
+
+#menu-bar {
+  width: 100%;
+}
+
+.menu-list-p {
+  width: 100%;
+  text-align: center;
+}
+
+.menu-item {
+  text-align: center;
+  width: 25%;
+  /* width: 150px; */
 }
 
 .icon-label {
   padding-top: -px;
-  color: var(--cream);
+  color: var(--grai);
 }
 
 .table-title {
@@ -131,7 +163,18 @@ img {
 
 /* MenuBar */
 .menuBarNo {
-  display: none;
+  /* display: none; */
+  position: fixed;
+  /* margin-top: 0px; */
+  /* margin-right: 0px; */
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  opacity: 0.8;
+  /* height: 100%; */
+  background-color: var(--cream);
 }
 
 /* 各ページ */
@@ -152,68 +195,68 @@ img {
 
 /* 色設定 */
 .red {
-  background-color: #c0392b;
+  background-color: var(--red);
 }
 .pink {
-  background-color: #ee5a24;
+  background-color: var(--pink);
 }
 .orange {
-  background-color: #f79f1f;
+  background-color: var(--orange);
 }
 .yellow {
-  background-color: #f1c40f;
+  background-color: var(--yellow);
 }
 .blue {
-  background-color: #1289a7;
+  background-color: var(--blue);
 }
 .purple {
-  background-color: #8e44ad;
+  background-color: var(--purple);
 }
 .yellowgreen {
-  background-color: #a3cb38;
+  background-color: var(--yellowgreen);
 }
 .green {
-  background-color: #009432;
+  background-color: var(--green);
 }
 .grai {
-  background-color: #2f3640;
+  background-color: var(--grai);
 }
 .cream {
-  background-color: #e6fafc;
+  background-color: var(--cream);
 }
 .b-red {
-  border: solid 5px #c0392b;
+  border: solid 5px var(--red);
 }
 .t-red {
-  color: #c0392b;
+  color: var(--red);
 }
 .t-pink {
-  color: #ee5a24;
+  color: var(--pink);
 }
 .t-orange {
-  color: #f79f1f;
+  color: var(--orange);
 }
 .t-yellow {
-  color: #f1c40f;
+  color: var(--yellow);
 }
 .t-blue {
-  color: #1289a7;
+  color: var(--blue);
 }
 .t-purple {
-  color: #8e44ad;
+  color: var(--purple);
 }
 .t-yellowgreen {
-  color: #a3cb38;
+  color: var(--yellowgreen);
 }
 .t-green {
-  color: #009432;
+  color: var(--green);
 }
 .t-grai {
-  color: #2f3640;
+  color: var(--grai);
 }
 .t-grai-w {
   color: #7f8c8d;
 }
 .t-cream {
-  color: #e6fafc;
+  color: var(--cream);
 }
