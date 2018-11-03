@@ -22,7 +22,7 @@
   var xhr = new XMLHttpRequest;
 
   xhr.addEventListener('load', handleload, false);
-  xhr.open('GET', 'question.json', true);
+  xhr.open('GET', 'https://trompot.github.io/kosen_fes/enqute/question.json', true);
   xhr.send(null);
 }(function handleLoad (event) {
   var xhr = event.target,
