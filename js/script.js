@@ -49,6 +49,7 @@ function initVue(data) {
   new Vue({
     el: "#page",
     data: {
+      fes: data["fes"],
       depart: data["department"],
       exhibition: data["other"],
       food: data["food"],
@@ -96,6 +97,7 @@ $(function() {
 // ページ一覧
 var page = [
   "top",
+  "fes",
   "about",
   "committee",
   "depart_exhibition",

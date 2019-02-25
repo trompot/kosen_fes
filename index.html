@@ -30,11 +30,26 @@
         <!-- top -->
         <div id="top" class="contents">
             <div class="title row">
-                <h2>第52回奈良高専祭</h2>
-                <h1 class="thema">熱狂！ウルトラ高専祭！</h1>
+                <div style="z-index: 1; position: relative;">
+                    <h2 style="opacity: 0.3;">第52回奈良高専祭</h2>
+                    <h1 style="opacity: 0.3;" class="thema">熱狂！ウルトラ高専祭！</h1>
+                </div>
+                <div class="" style="margin-top: -90px; z-index: 2; position: relative; transform: rotate(-20deg);">
+                    <h3 class="t-cream" style="-webkit-text-stroke: 0.2px var(--red);">第52回奈良高専祭は終了しました<br>ご来場いただきありがとうございました</h3>
+                </div>
             </div>
             <div class="arrow-down">
                 <img src="images/icon/angle-down-solid.svg">
+            </div>
+        </div>
+
+        <!-- 高専祭当日写真 -->
+        <div id="#fes" class="contents">
+            <h3 class="title"><img class="title-icon" src="images/icon/flag-solid.svg" alt="icon"> 高専祭当日</h3>
+            <div v-for="(value) in fes">
+                <div class="card cream" style="opacity: 0.9; border: solid 6px var(--yellow);">
+                    <img v-bind:src="'./images/' + value.images" alt="" class="fes-imag">
+                </div>
             </div>
         </div>
 
@@ -335,8 +350,8 @@
     </div>
 
     <!-- MenuBar -->
-    <div class="menu row">
-        <div id="menu">&emsp;</div>
+    <div class="menu row" style="z-index: 3">
+        <div id="menu" style="animation: rotate-anime 32400s linear infinite;">&emsp;</div>
         <div class="menu-bar-list">
             <div class="menu-bar-o">
                 <a id="menu-bar-o" data-toggle="collapse" href="#menu-bar" role="button" aria-expanded="true" aria-controls="menu-bar">
@@ -344,7 +359,7 @@
                     <!--<p class="icon-label">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p> -->
                 </a>
             </div>
-            <div data-toggle="menu-bar" id="menu-bar" class="collapse">
+            <div data-toggle="menu-bar" id="menu-bar" class="collapse" style="">
                 <div class="row menu-list-p">
                     <div class="col-sm-12">
                         <div class="row">

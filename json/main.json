@@ -1,4 +1,22 @@
 {
+  "fes": [
+    {
+      "images": "/fes/02.jpg",
+      "text": ""
+    },
+    {
+      "images": "/fes/01.jpg",
+      "text": ""
+    },
+    {
+      "images": "/fes/03.jpg",
+      "text": ""
+    },
+    {
+      "images": "/fes/04.jpg",
+      "text": ""
+    }
+  ],
   "department": [
     {
       "name": "機械工学科",

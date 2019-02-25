@@ -101,6 +101,12 @@ a:hover {
   color: var(--grai);
 }
 
+.fes-imag {
+  max-width: 60%;
+  background-color: #eee8aa;
+  margin: 0 auto;
+}
+
 .map {
   margin-bottom: 5px;
 }
@@ -259,4 +265,10 @@ a:hover {
 }
 .t-cream {
   color: var(--cream);
+}
+
+
+@keyframes rotate-anime {
+  0%  {transform: rotate(0);}
+  100%  {transform: rotate(360deg);}
 }
